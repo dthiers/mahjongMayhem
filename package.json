@@ -13,6 +13,10 @@
     "javascript",
     "advanced"
   ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "author": "Dion Thiers",
   "license": "ISC",
   "devDependencies": {
@@ -21,6 +25,7 @@
     "grunt": "^0.4.5",
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "ngstorage": "^0.3.10"
   }
 }

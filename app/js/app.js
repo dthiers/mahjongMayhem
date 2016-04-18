@@ -1,5 +1,5 @@
 require('angular/angular');
-require('ng-storage');
+require('ngstorage');
 require('angular-ui-router/release/angular-ui-router');
 
 
