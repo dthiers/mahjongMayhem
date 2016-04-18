@@ -21,6 +21,13 @@ module.exports = function($http){
     }
   ]
 
+  gameService.game = {
+    _id: "id",
+    createdBy: {
+      _id: ""
+    }
+  }
+
   gameService.getAllGames = function(){
     return gameService.games;
   }

@@ -1,6 +1,8 @@
-module.exports = function($scope, GameService) {
+module.exports = function($scope, GameService, TEST) {
 
-  $scope.test = "test";
+  $scope.test = TEST.test;
+
+
 
   this.games = GameService.getAllGames();
 }

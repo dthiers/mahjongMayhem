@@ -21,8 +21,8 @@ module.exports = function(grunt) {
    },
    watch: {
      js: {
-       files: "app/**/*.js",
-       tasks: "browserify"
+       files: 'app/**/*.js',
+       tasks: 'browserify'
      },
      html: {
        files: 'app/**/*.html',
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
    'http-server': {
      dev: {
        root: './dist',
-       port: 3001,
+       port: 3000,
        openBrowser: true,
        runInBackground: true
      }
