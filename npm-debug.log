@@ -1,0 +1,210 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'angular-ui-router' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose install initial load of /Users/dionthiers/git/mahjongMayhem/package.json
+5 warn package.json mahjongmayhem@1.0.0 No repository field.
+6 warn package.json mahjongmayhem@1.0.0 No README data
+7 verbose installManyTop reading scoped package data from /Users/dionthiers/git/mahjongMayhem/node_modules/angular/package.json
+8 verbose installManyTop reading scoped package data from /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router/package.json
+9 verbose installManyTop reading scoped package data from /Users/dionthiers/git/mahjongMayhem/node_modules/grunt/package.json
+10 verbose installManyTop reading scoped package data from /Users/dionthiers/git/mahjongMayhem/node_modules/grunt-browserify/package.json
+11 verbose installManyTop reading scoped package data from /Users/dionthiers/git/mahjongMayhem/node_modules/grunt-contrib-copy/package.json
+12 verbose installManyTop reading scoped package data from /Users/dionthiers/git/mahjongMayhem/node_modules/grunt-contrib-watch/package.json
+13 verbose installManyTop reading scoped package data from /Users/dionthiers/git/mahjongMayhem/node_modules/grunt-http-server/package.json
+14 info package.json grunt-browserify@5.0.0 No license field.
+15 verbose readDependencies loading dependencies from /Users/dionthiers/git/mahjongMayhem/package.json
+16 verbose install angular-ui-router is installed as 0.2.18
+17 silly cache add args [ 'angular-ui-router', null ]
+18 verbose cache add spec angular-ui-router
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'angular-ui-router',
+19 silly cache add   scope: null,
+19 silly cache add   name: 'angular-ui-router',
+19 silly cache add   rawSpec: '',
+19 silly cache add   spec: 'latest',
+19 silly cache add   type: 'tag' }
+20 silly addNamed angular-ui-router@latest
+21 verbose addNamed "latest" is being treated as a dist-tag for angular-ui-router
+22 info addNameTag [ 'angular-ui-router', 'latest' ]
+23 silly mapToRegistry name angular-ui-router
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-router
+27 verbose addNameTag registry:https://registry.npmjs.org/angular-ui-router not in flight; fetching
+28 verbose request uri https://registry.npmjs.org/angular-ui-router
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 3:16:32 PM
+31 verbose request id b057fa833cfd26f0
+32 verbose etag "C4YSLRBJGTGW2AV6DVBNWDVZR"
+33 http request GET https://registry.npmjs.org/angular-ui-router
+34 http 304 https://registry.npmjs.org/angular-ui-router
+35 verbose headers { date: 'Mon, 18 Apr 2016 13:16:32 GMT',
+35 verbose headers   via: '1.1 varnish',
+35 verbose headers   'cache-control': 'max-age=300',
+35 verbose headers   etag: '"C4YSLRBJGTGW2AV6DVBNWDVZR"',
+35 verbose headers   age: '249',
+35 verbose headers   connection: 'keep-alive',
+35 verbose headers   'x-served-by': 'cache-ams4133-AMS',
+35 verbose headers   'x-cache': 'HIT',
+35 verbose headers   'x-cache-hits': '3',
+35 verbose headers   'x-timer': 'S1460985392.922139,VS0,VE0',
+35 verbose headers   vary: 'Accept-Encoding' }
+36 silly get cb [ 304,
+36 silly get   { date: 'Mon, 18 Apr 2016 13:16:32 GMT',
+36 silly get     via: '1.1 varnish',
+36 silly get     'cache-control': 'max-age=300',
+36 silly get     etag: '"C4YSLRBJGTGW2AV6DVBNWDVZR"',
+36 silly get     age: '249',
+36 silly get     connection: 'keep-alive',
+36 silly get     'x-served-by': 'cache-ams4133-AMS',
+36 silly get     'x-cache': 'HIT',
+36 silly get     'x-cache-hits': '3',
+36 silly get     'x-timer': 'S1460985392.922139,VS0,VE0',
+36 silly get     vary: 'Accept-Encoding' } ]
+37 verbose etag https://registry.npmjs.org/angular-ui-router from cache
+38 verbose get saving angular-ui-router to /Users/dionthiers/.npm/registry.npmjs.org/angular-ui-router/.cache.json
+39 silly addNameTag next cb for angular-ui-router with tag latest
+40 silly addNamed angular-ui-router@0.2.18
+41 verbose addNamed "0.2.18" is a plain semver version for angular-ui-router
+42 silly cache afterAdd angular-ui-router@0.2.18
+43 verbose afterAdd /Users/dionthiers/.npm/angular-ui-router/0.2.18/package/package.json not in flight; writing
+44 verbose afterAdd /Users/dionthiers/.npm/angular-ui-router/0.2.18/package/package.json written
+45 silly install resolved [ { name: 'angular-ui-router',
+45 silly install resolved     description: 'State-based routing for AngularJS',
+45 silly install resolved     version: '0.2.18',
+45 silly install resolved     homepage: 'http://angular-ui.github.com/',
+45 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+45 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'git+https://github.com/angular-ui/ui-router.git' },
+45 silly install resolved     bugs: { url: 'https://github.com/angular-ui/ui-router/issues' },
+45 silly install resolved     license: 'MIT',
+45 silly install resolved     licenses: [ [Object] ],
+45 silly install resolved     dependencies: { angular: '^1.0.8' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { 'faithful-exec': '~0.1.0',
+45 silly install resolved        grunt: '~0.4.1',
+45 silly install resolved        'grunt-contrib-clean': '~0.5.0',
+45 silly install resolved        'grunt-contrib-concat': '~0.3.0',
+45 silly install resolved        'grunt-contrib-connect': '~0.7.1',
+45 silly install resolved        'grunt-contrib-jshint': '~0.8.0',
+45 silly install resolved        'grunt-contrib-uglify': '~0.4.0',
+45 silly install resolved        'grunt-contrib-watch': '~0.5.3',
+45 silly install resolved        'grunt-conventional-changelog': '~1.1.0',
+45 silly install resolved        'grunt-karma': '~0.6.2',
+45 silly install resolved        'grunt-ngdocs': '~0.2.5',
+45 silly install resolved        karma: '~0.10.4',
+45 silly install resolved        'karma-chrome-launcher': '~0.1.0',
+45 silly install resolved        'karma-coffee-preprocessor': '~0.1.0',
+45 silly install resolved        'karma-firefox-launcher': '~0.1.0',
+45 silly install resolved        'karma-html2js-preprocessor': '~0.1.0',
+45 silly install resolved        'karma-jasmine': '~0.1.3',
+45 silly install resolved        'karma-phantomjs-launcher': '~0.1.0',
+45 silly install resolved        'karma-requirejs': '~0.2.0',
+45 silly install resolved        'karma-script-launcher': '~0.1.0',
+45 silly install resolved        'load-grunt-tasks': '~0.4.0',
+45 silly install resolved        'phantomjs-polyfill': '0.0.1',
+45 silly install resolved        requirejs: '^2.1.22',
+45 silly install resolved        shelljs: '~0.2.6' },
+45 silly install resolved     main: 'release/angular-ui-router.js',
+45 silly install resolved     gitHead: 'ec6ca36b625e578e59e631b3c9e786a6ac70678c',
+45 silly install resolved     _id: 'angular-ui-router@0.2.18',
+45 silly install resolved     scripts: {},
+45 silly install resolved     _shasum: '1dad70415c73d7046fd2e130df03d62fb7464360',
+45 silly install resolved     _from: 'angular-ui-router@latest',
+45 silly install resolved     _npmVersion: '3.3.12',
+45 silly install resolved     _nodeVersion: '5.4.0',
+45 silly install resolved     _npmUser:
+45 silly install resolved      { name: 'christopherthielen',
+45 silly install resolved        email: 'christopherthielen@ikkyikkyikkypikangzoopboing.com' },
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '1dad70415c73d7046fd2e130df03d62fb7464360',
+45 silly install resolved        tarball: 'https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.18.tgz' },
+45 silly install resolved     _npmOperationalInternal:
+45 silly install resolved      { host: 'packages-5-east.internal.npmjs.com',
+45 silly install resolved        tmp: 'tmp/angular-ui-router-0.2.18.tgz_1454862455574_0.3742834459990263' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.18.tgz',
+45 silly install resolved     readme: 'ERROR: No README data found!' } ]
+46 info install angular-ui-router@0.2.18 into /Users/dionthiers/git/mahjongMayhem
+47 info installOne angular-ui-router@0.2.18
+48 verbose installOne of angular-ui-router to /Users/dionthiers/git/mahjongMayhem not in flight; installing
+49 verbose lock using /Users/dionthiers/.npm/_locks/angular-ui-router-310e3841812b08dd.lock for /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+50 silly install write writing angular-ui-router 0.2.18 to /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+51 verbose unbuild node_modules/angular-ui-router
+52 info preuninstall angular-ui-router@0.2.18
+53 info uninstall angular-ui-router@0.2.18
+54 verbose unbuild rmStuff angular-ui-router@0.2.18 from /Users/dionthiers/git/mahjongMayhem/node_modules
+55 info postuninstall angular-ui-router@0.2.18
+56 silly gentlyRm /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router is being purged from base /Users/dionthiers/git/mahjongMayhem
+57 verbose gentlyRm don't care about contents; nuking /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+58 silly vacuum-fs purging /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+59 silly vacuum-fs quitting because other entries in /Users/dionthiers/git/mahjongMayhem/node_modules
+60 verbose tar unpack /Users/dionthiers/.npm/angular-ui-router/0.2.18/package.tgz
+61 verbose tar unpacking to /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+62 silly gentlyRm /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router is being purged
+63 verbose gentlyRm don't care about contents; nuking /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+64 silly gunzTarPerm modes [ '755', '644' ]
+65 silly gunzTarPerm extractEntry package.json
+66 silly gunzTarPerm extractEntry README.md
+67 silly gunzTarPerm extractEntry LICENSE
+68 silly gunzTarPerm extractEntry CHANGELOG.md
+69 silly gunzTarPerm extractEntry CONTRIBUTING.md
+70 silly gunzTarPerm extractEntry ui-router2.ipr
+71 silly gunzTarPerm extractEntry release/angular-ui-router.js
+72 silly gunzTarPerm extractEntry release/angular-ui-router.min.js
+73 silly gunzTarPerm extractEntry src/common.js
+74 silly gunzTarPerm extractEntry src/state.js
+75 silly gunzTarPerm extractEntry src/stateDirectives.js
+76 silly gunzTarPerm extractEntry src/stateFilters.js
+77 silly gunzTarPerm extractEntry src/resolve.js
+78 silly gunzTarPerm extractEntry src/urlMatcherFactory.js
+79 silly gunzTarPerm extractEntry src/urlRouter.js
+80 silly gunzTarPerm extractEntry src/view.js
+81 silly gunzTarPerm extractEntry src/viewDirective.js
+82 silly gunzTarPerm extractEntry src/viewScroll.js
+83 silly gunzTarPerm extractEntry src/templateFactory.js
+84 silly gunzTarPerm extractEntry ui-router2.iml
+85 silly gunzTarPerm extractEntry ui-router2.iws
+86 verbose write writing to /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router/package.json
+87 info preinstall angular-ui-router@0.2.18
+88 verbose readDependencies loading dependencies from /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router/package.json
+89 verbose readDependencies loading dependencies from /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router/package.json
+90 silly install resolved []
+91 verbose about to build /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+92 info build /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+93 info linkStuff angular-ui-router@0.2.18
+94 silly linkStuff angular-ui-router@0.2.18 has /Users/dionthiers/git/mahjongMayhem/node_modules as its parent node_modules
+95 verbose linkBins angular-ui-router@0.2.18
+96 verbose linkMans angular-ui-router@0.2.18
+97 verbose rebuildBundles angular-ui-router@0.2.18
+98 info install angular-ui-router@0.2.18
+99 info postinstall angular-ui-router@0.2.18
+100 verbose unlock done using /Users/dionthiers/.npm/_locks/angular-ui-router-310e3841812b08dd.lock for /Users/dionthiers/git/mahjongMayhem/node_modules/angular-ui-router
+101 verbose validateInstall loading /Users/dionthiers/git/mahjongMayhem/package.json for validation
+102 verbose stack Error: The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+102 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+102 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+102 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+102 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+102 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+102 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+102 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+102 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+102 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+102 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+103 verbose cwd /Users/dionthiers/git/mahjongMayhem
+104 error Darwin 15.3.0
+105 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save-dev" "angular-ui-router"
+106 error node v4.2.6
+107 error npm  v2.14.12
+108 error code EPEERINVALID
+109 error peerinvalid The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+109 error peerinvalid Peer grunt-http-server@1.16.0 wants grunt@~0.4.5
+110 verbose exit [ 1, true ]
