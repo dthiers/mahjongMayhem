@@ -1,4 +1,4 @@
-module.exports = function($http){
+module.exports = function($http, API){
 
   var gameService = {};
 
@@ -28,9 +28,12 @@ module.exports = function($http){
     }
   }
 
-  gameService.getAllGames = function(){
-    return gameService.games;
+  return gameService = {
+    // Get all games from the API
+    getAllGames: function(options){
+      $http.get(API.url + API.games).then(
+        options.onSuccess, options.onError
+      )
+    }
   }
-
-  return gameService;
 }

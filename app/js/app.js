@@ -17,3 +17,5 @@ require('./constant/constant.js')(app);
 
 app.controller('GameCtrl', require('./controllers/gameCtrl'));
 app.factory('GameService', require('./services/gameService'));
+
+app.controller('AuthCtrl', require('./controllers/authCtrl'));

@@ -10,15 +10,16 @@
   <body ng-controller="GameCtrl as gameCtrl">
     <a ui-sref="home">Home</a>
     <a ui-sref="test">Test</a>
-
+    <a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authCallback">oauth</a>
+    <a ui-sref="authCallback">callback</a>
     <!-- Don't forget this tag.. -->
     <div ui-view></div>
     <p>
       {{ test }}
     </p>
     <ul>
-      <li ng-repeat="game in gameCtrl.games">
-        {{ game.name }}
+      <li ng-repeat="game in gameCtrl.games track by $index" ng-show="game.state === 'open'">
+        {{ game._id }}
       </li>
     </ul>
 

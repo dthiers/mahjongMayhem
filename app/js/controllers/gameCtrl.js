@@ -1,8 +1,21 @@
-module.exports = function($scope, GameService, TEST) {
+module.exports = function($scope, GameService) {
+  var self = this;
 
-  $scope.test = TEST.test;
+  self.games = [];
+  $scope.test = "Testje in de controllers";
 
-
-
-  this.games = GameService.getAllGames();
+  // GameService.getAllGames({
+  //   onSuccess: function(result){
+  //     // TODO: not use this.games in here, this creates a different scope
+  //     //console.log(result);
+  //     angular.forEach(result.data, function(value, key) {
+  //       self.games[key] = value;
+  //     })
+  //     //self.games.push(result.data[0]);
+  //     //this.games = result.data;
+  //   },
+  //   onError: function(err){
+  //     console.log(err);
+  //   }
+  // })
 }
