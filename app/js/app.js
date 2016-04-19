@@ -1,5 +1,5 @@
 require('angular/angular');
-require('ngstorage');
+require('ng-storage/ngStorage.min');
 require('angular-ui-router/release/angular-ui-router');
 
 
@@ -7,7 +7,7 @@ require('angular-ui-router/release/angular-ui-router');
 var app = angular.module('app', ['ui.router', 'ngStorage']);
 
 // Routing
-require('./config/router.js')(app);
+require('./config/router.js')(app)
 
 // Test to see if config can be ran outside of app.js
 require('./config/config.js')(app);
