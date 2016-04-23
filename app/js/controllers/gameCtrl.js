@@ -1,8 +1,14 @@
 module.exports = function($scope, GameService) {
   var self = this;
 
+  self.toggled;
+
   self.games = [];
   $scope.test = "Testje in de controllers";
+
+  self.toggleClass = function(){
+    self.toggled = !self.toggled;
+  }
 
   // GameService.getAllGames({
   //   onSuccess: function(result){

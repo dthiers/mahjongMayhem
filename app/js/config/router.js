@@ -9,10 +9,7 @@ module.exports = function(app) {
     $stateProvider
       .state('home', {
         url: '/home?username',
-        templateUrl: '../partials/home.html',
-        controller: function($stateParams){
-          console.log($stateParams);
-        }
+        templateUrl: '../partials/home.html'
       })
       .state('test', {
         url: '/test',
@@ -22,6 +19,27 @@ module.exports = function(app) {
         url: '/authCallback?username&token',
         templateUrl: '../partials/auth.html',
         controller: 'AuthCtrl'
+      })
+      // Abstract parent state. Preload set to true
+      .state('sidebar', {
+        abstract: true,
+        views: {
+          sidebar: { template: '<div ui-view></div>' }
+        }
+      })
+      .state('sidebar.loggedIn', {
+        templateUrl: '../partials/sidebar.html'
+      });
+
+    $stateProvider
+      .state('wrapper', {
+        abstract: true,
+        views: {
+          wrapper: { template: 'div ui-view></div>' }
+        }
+      })
+      .state('content', {
+        template: '<pre>TEST</pre>'
       })
   });
 }
