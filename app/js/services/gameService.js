@@ -34,6 +34,18 @@ module.exports = function($http, API){
       $http.get(API.url + API.games).then(
         options.onSuccess, options.onError
       )
+    },
+    getMyGames: function(query, options){
+      console.log(query);
+      $http.get(API.url + API.games + query).then(
+        options.onSuccess, options.onError
+      )
+    },
+    // Create a game.
+    createGame: function(gameParameters, options){
+      $http.post(API.url + API.games, gameParameters).then(
+        options.onSuccess, options.onError
+      )
     }
   }
 }

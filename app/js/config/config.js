@@ -12,7 +12,7 @@ module.exports = function(app) {
       $templateCache.removeAll();
 
       // This shows the sidebar
-      $state.go('sidebar.loggedIn');
+      //$state.go('sidebar.loggedIn');
       // $state.go('wrapper.content');
     });
 

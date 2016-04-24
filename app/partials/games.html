@@ -1,0 +1,6 @@
+<h1>LIST OF ALL GAMES</h1>
+<ul>
+  <li ng-repeat="game in gameCtrl.games track by $index" ng-show="game.state === 'open'">
+    {{ game._id }}
+  </li>
+</ul>

@@ -22,6 +22,8 @@ require('./config/config.js')(app);
 // Test to see if constant can be declared outside of app.js
 require('./constant/constant.js')(app);
 
+
+
 app.controller('GameCtrl', require('./controllers/gameCtrl'));
 app.factory('GameService', require('./services/gameService'));
 
