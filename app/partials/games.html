@@ -1,6 +1,9 @@
 <h1>LIST OF ALL GAMES</h1>
+
 <ul>
-  <li ng-repeat="game in gameCtrl.games track by $index" ng-show="game.state === 'open'">
-    {{ game._id }}
-  </li>
+    <li ng-repeat="game in gameCtrl.games track by $index" ng-show="game.state === 'open'">
+        {{ game._id }} ({{ game.players.length }} / {{ game.maxPlayers }})
+        <button ng-click="gameCtrl.joinGame(game._id)">Join</button>
+        <button ng-click="gameCtrl.getPlayers(game._id)">Show players</button>
+    </li>
 </ul>
