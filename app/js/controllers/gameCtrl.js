@@ -61,9 +61,14 @@ module.exports = function ($scope, GameService, $localStorage) {
     self.joinGame = function (id) {
         GameService.joinGame(id, {
             onSuccess: function (result) {
+                alert('Game joined');
                 self.getAllGames();
             },
             onError: function (err) {
+                if(err.status == 401) {
+                    alert('Please log in first');
+                    return;
+                }
                 alert(err.data.message);
             }
         })
