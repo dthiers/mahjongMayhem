@@ -17,6 +17,9 @@
     "type": "git",
     "url": ""
   },
+  "scripts": {
+    "test": "karma start karma-config.js"
+  },
   "author": "Dion Thiers",
   "license": "ISC",
   "devDependencies": {
