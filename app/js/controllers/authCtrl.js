@@ -1,5 +1,4 @@
-
-module.exports = function($scope, $stateParams, $state, $localStorage){
+module.exports = function ($scope, $stateParams, $state, $localStorage) {
 
   $scope.auth = "Auth";
 

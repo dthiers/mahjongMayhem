@@ -23,7 +23,6 @@ require('./config/config.js')(app);
 require('./constant/constant.js')(app);
 
 
-
 app.controller('GameCtrl', require('./controllers/gameCtrl'));
 app.factory('GameService', require('./services/gameService'));
 

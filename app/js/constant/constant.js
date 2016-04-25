@@ -1,4 +1,4 @@
-module.exports = function(app){
+module.exports = function (app) {
   app.constant('API', {
     url: "http://mahjongmayhem.herokuapp.com/",
     games: 'Games',

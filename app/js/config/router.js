@@ -1,6 +1,6 @@
-module.exports = function(app) {
+module.exports = function (app) {
   console.log('Word ik gerequired');
-  app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+  app.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
     $urlRouterProvider.otherwise('');
 
@@ -35,16 +35,16 @@ module.exports = function(app) {
         templateUrl: '../partials/my-games.html',
         controller: 'GameCtrl as gameCtrl'
       })
-      // Abstract parent state. Preload set to true
-      // .state('sidebar', {
-      //   abstract: true,
-      //   views: {
-      //     sidebar: { template: '<div ui-view></div>' }
-      //   }
-      // })
-      // .state('sidebar.loggedIn', {
-      //   templateUrl: '../partials/sidebar.html'
-      // });
+    // Abstract parent state. Preload set to true
+    // .state('sidebar', {
+    //   abstract: true,
+    //   views: {
+    //     sidebar: { template: '<div ui-view></div>' }
+    //   }
+    // })
+    // .state('sidebar.loggedIn', {
+    //   templateUrl: '../partials/sidebar.html'
+    // });
 
     // $stateProvider
     //   .state('wrapper', {
