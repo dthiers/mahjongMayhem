@@ -1,91 +1,80 @@
+/**
+*
+* Single game controllers
+*
+**/
+
 module.exports = function ($scope, GameService, $localStorage) {
   console.log('gameCtrl');
   var self = this;
 
   self.toggled;
 
-  self.games = [];
-  $scope.test = "Testje in de controllers";
+  self.gameId = "5541fc5b1872631100678bb4"; // @use for sprint 2.
+
+  self.matchedTiles = [];
 
   self.toggleClass = function () {
     self.toggled = !self.toggled;
   }
 
-  self.getAllGames = function () {
-    GameService.getAllGames({
-      onSuccess: function (result) {
-        // TODO: not use this.games in here, this creates a different scope
-        //console.log(result);
-        angular.forEach(result.data, function (value, key) {
-          self.games[key] = value;
-        })
-        //self.games.push(result.data[0]);
-        //this.games = result.data;
+  /**
+  * Get tiles for game with id
+  * @param  id: gameId
+  **/
+  self.getGameTiles = function(id) {
+    GameService.getGameTiles(id, {
+      onSuccess: function(result) {
+        self.tiles = result.data;
       },
-      onError: function (err) {
+      onError: function(err) {
         console.log(err);
       }
     })
   }
 
-  self.getAllGames();
+  /**
+  * Select tile for match.
+  * @param tile: tile obj
+  **/
+  self.selectTileForMatch = function(tile) {
+    if(self.matchedTiles.length < 2) {
+      self.matchedTiles.push(tile);
+    } else {
+      self.matchedTiles[0] = tile;
+    }
+    console.log(self.matchedTiles);
+  }
 
-  self.createGame = function (newGame) {
-    console.log(newGame);
-    GameService.createGame(JSON.stringify(newGame), {
-      onSuccess: function (result) {
+  /**
+  * Remove tile from matchedTiles
+  * @param tile: tile obj
+  **/
+  self.removeTileFromMatch = function(tile) {
+    self.matchedTiles.splice(self.matchedTiles.indexOf(tile),1);
+  }
+
+  /**
+  * Submit matchedTiles to API
+  * @param matchedTiles: array[tile]
+  **/
+  self.submitMatchedTiles = function(matchedTiles) {
+    var tiles = {
+      tile1Id: matchedTiles[0]._id,
+      tile2Id: matchedTiles[1]._id
+    }
+    console.log(tiles);
+    GameService.checkMatchedTiles(self.gameId, tiles, {
+      onSuccess: function(result){
         console.log(result.data);
-        alert('Successfully added game with ID ' + result.data._id);
       },
-      onError: function (err) {
-        console.log(err);
-      }
-    })
-  }
-
-  self.getMyGames = function () {
-    var query = '?createdBy=' + $localStorage.username;
-    GameService.getMyGames(query, {
-      onSuccess: function (result) {
-        angular.forEach(result.data, function (value, key) {
-          self.games[key] = value;
-        })
-        console.log(result.data);
-      },
-      onError: function (err) {
-        console.log(err);
-      }
-    })
-  }
-
-  self.joinGame = function (id) {
-    GameService.joinGame(id, {
-      onSuccess: function (result) {
-        alert('Game joined');
-        self.getAllGames();
-      },
-      onError: function (err) {
-        if (err.status == 401) {
-          alert('Please log in first');
-          return;
-        }
+      onError: function(err) {
         alert(err.data.message);
-      }
-    })
-  }
-
-  self.getPlayers = function (id) {
-    GameService.getPlayers(id, {
-      onSuccess: function (result) {
-        var names = [];
-        angular.forEach(result.data, function (value, key) {
-          names.push(value.name);
-        })
-        alert(names);
-      },
-      onError: function (err) {
+        self.matchedTiles = [];
         console.log(err);
       }
     })
   }
+
+  self.getGameTiles(self.gameId);
 }

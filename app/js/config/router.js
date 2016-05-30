@@ -23,16 +23,21 @@ module.exports = function (app) {
       .state('games', {
         url: '/games',
         templateUrl: '../partials/games.html',
-        controller: 'GameCtrl as gameCtrl'
+        controller: 'GamesCtrl as gamesCtrl'
       })
       .state('newGame', {
         url: '/newGame',
         templateUrl: '../partials/new-game.html',
-        controller: 'GameCtrl as gameCtrl'
+        controller: 'NewGameCtrl as newGameCtrl'
       })
       .state('myGames', {
         url: '/myGames',
         templateUrl: '../partials/my-games.html',
+        controller: 'GamesCtrl as gamesCtrl'
+      })
+      .state('game', {
+        url: '/game/:id',
+        templateUrl: '../partials/game.html',
         controller: 'GameCtrl as gameCtrl'
       })
     // Abstract parent state. Preload set to true

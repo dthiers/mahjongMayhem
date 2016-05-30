@@ -1,0 +1,19 @@
+<h1>Game with id {{ gameCtrl.gameId }}</h1>
+<hr />
+  <!-- <button ng-repeat="tile in gameCtrl.matchedTile" ng-click="removeTileFromMatch(tile)">{{ tile.tile.suit }}</button> -->
+  <span ng-repeat="tile in gameCtrl.matchedTiles">
+    <button ng-click="gameCtrl.removeTileFromMatch(tile)">{{tile.tile.suit}} , {{tile.tile.name}}</button>
+  </span>
+
+  <br />
+  <button
+    ng-if="gameCtrl.matchedTiles.length == 2"
+    ng-click="gameCtrl.submitMatchedTiles(gameCtrl.matchedTiles)">Submit match</button>
+<hr />
+
+
+<ul>
+  <li ng-repeat="tile in gameCtrl.tiles">
+    <button ng-click="gameCtrl.selectTileForMatch(tile)" ng-disabled="gameCtrl.matchedTiles.indexOf(tile) > -1">{{tile.tile.suit}} , {{tile.tile.name}}</button>
+  </li>
+</ul>

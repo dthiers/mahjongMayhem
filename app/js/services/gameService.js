@@ -1,4 +1,12 @@
+/**
+*
+* GameService.
+*
+**/
+
 module.exports = function ($http, API) {
+
+  console.log('Here from the gameService');
 
   var gameService = {};
 
@@ -41,6 +49,12 @@ module.exports = function ($http, API) {
         options.onSuccess, options.onError
       )
     },
+    // Get all gameTemplates
+    getGameTemplates: function(options) {
+      $http.get(API.url + API.gameTemplates).then(
+        options.onSuccess, options.onError
+      )
+    },
     // Create a game.
     createGame: function (gameParameters, options) {
       $http.post(API.url + API.games, gameParameters).then(
@@ -58,6 +72,16 @@ module.exports = function ($http, API) {
       $http.get(API.url + API.games + '/' + id + '/Players').then(
         options.onSuccess, options.onError
       )
+    },
+    getGameTiles: function(id, options) {
+      $http.get(API.url + API.games + '/' + id + '/Tiles').then(
+        options.onSuccess, options.onError
+      )
+    },
+    checkMatchedTiles: function(gameId, tiles, options) {
+      $http.post(API.url + API.games + '/' + gameId + '/' + API.tiles + '/' + API.matches, tiles).then(
+        options.onSuccess, options.onError
+      );
     }
   }
 }

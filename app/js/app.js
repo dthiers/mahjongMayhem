@@ -13,17 +13,17 @@ require('ui-router-extras/release/modular/ct-ui-router-extras.transition');
 // Create your app
 var app = angular.module('app', ['ui.router', 'ngStorage', 'ct.ui.router.extras.sticky', 'ct.ui.router.extras.dsr', 'ct.ui.router.extras.future', 'ct.ui.router.extras.previous', 'ct.ui.router.extras.statevis', 'ct.ui.router.extras.transition']);
 
+// Services
+require('./config/service.js')(app);
+
+// controllers
+require('./config/controller.js')(app);
+
 // Routing
 require('./config/router.js')(app)
 
-// Test to see if config can be ran outside of app.js
+// Config
 require('./config/config.js')(app);
 
-// Test to see if constant can be declared outside of app.js
+// Constants
 require('./constant/constant.js')(app);
-
-
-app.controller('GameCtrl', require('./controllers/gameCtrl'));
-app.factory('GameService', require('./services/gameService'));
-
-app.controller('AuthCtrl', require('./controllers/authCtrl'));

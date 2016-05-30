@@ -1,19 +1,31 @@
 <h1>NEW GAME</h1>
 <form name="formNewGame">
   <label for="minPlayers">minPlayers:</label>
-  <input type="number" name="minPlayers"  ng-model="newGame.minPlayers" required/>
+  <input type="number" name="minPlayers"  ng-model="newGameCtrl.newGame.minPlayers" required/>
 
   <br />
 
   <label for="maxPlayers">maxPlayers:</label>
-  <input type="number" name="maxPlayers" ng-model="newGame.maxPlayers" required/>
+  <input type="number" name="maxPlayers" ng-model="newGameCtrl.newGame.maxPlayers" required/>
 
   <br />
 
   <label for="templateName">templateName:</label>
-  <input type="text" name="templateName" value="Ox" placeholder="template name" ng-model="newGame.templateName" required/>
+  <!-- <select name="templateName">
+    <option ng-repeat="template in newGameCtrl.gameTemplates" value="{{ template }}">
+      {{ template }}
+    </option>
+  </select> -->
+
+  <select name="templateName" id="templateName"
+     ng-options="option for option in newGameCtrl.gameTemplates"
+     ng-model="newGameCtrl.newGame.templateName">
+   </select>
+  <!-- <input type="text" name="templateName" value="Ox" placeholder="template name" ng-model="newGame.templateName" required/> -->
+
+  template name = {{ newGameCtrl.newGame.templateName }}
 
   <br  />
 
-  <button ng-disabled="formNewGame.$invalid" ng-click="gameCtrl.createGame(newGame)">Add game</button>
+  <button ng-disabled="formNewGame.$invalid" ng-click="newGameCtrl.createGame(newGameCtrl.newGame)">Add game</button>
 </form>

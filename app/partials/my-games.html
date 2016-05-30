@@ -1,7 +1,8 @@
 <h1>LIST OF ALL MYYYY GAMES</h1>
-<button ng-click="gameCtrl.getMyGames()">Get my own games</button>
+<button ng-click="gamesCtrl.getMyGames()">Get my own games</button>
 <ul>
-  <li ng-repeat="game in gameCtrl.games track by $index" ng-show="game.state === 'open'">
+  <li ng-repeat="game in gamesCtrl.myGames track by $index" ng-show="game.state === 'open'">
     {{ game._id }}
+    - <button ng-click="gamesCtrl.getGameTiles(game._id)">Get tiles</button>
   </li>
 </ul>
